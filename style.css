@@ -19,6 +19,7 @@
 }
 
 .link-container a {
+  color: black;
   margin-top: 10px;
   text-decoration: none;
 }

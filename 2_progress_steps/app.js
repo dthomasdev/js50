@@ -25,7 +25,7 @@ prev.addEventListener('click', ()=>{
 
 function update(){
   circles.forEach((circle, i)=>{
-    if(i === currentActive-1){
+    if(i < currentActive){
       circle.classList.add('active');
     } else {
       circle.classList.remove('active');
@@ -33,6 +33,8 @@ function update(){
   })
 
   const activeCircles = document.querySelectorAll('.circle.active');
+
+  console.log(activeCircles.length)
   const percentage = ((activeCircles.length -1) / (circles.length-1)) * 100;
   progress.style.width = percentage + '%'
 
