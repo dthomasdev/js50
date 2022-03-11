@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+
+:root{
+     --base-font     : "Muli";
+     --white         : #fff;
+     --black         : #000;
+     --primary       : hsl(47, 92%, 70%);
+     --secondary     : hsl(0, 24%, 94%);
+     --tertiary      : hsl(178, 41%, 36%);
+     --quarternary   : hsl(214, 25%, 56%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--base-font), sans-serif;
+  background-color: var(--secondary);
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faq_container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  position: relative;
+  background-color: transparent;
+  border: 3px solid var(--tertiary);
+  border-radius: 9px;
+  margin: 20px 0;
+  padding: 30px;
+  overflow: hidden;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+
+.faq.active{
+  background-color: var(--white);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 
+              0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after{
+  position: absolute;
+  z-index: 0;
+  content: "\f075";
+  font-family: 'Font Awesome 5 Free';
+  font-size: 7rem;
+  opacity: 0.2;
+}
+
+.faq.active::before{
+  color: var(--primary);
+  top: 5px;
+  left: 5px;
+  
+}
+
+.faq.active::after{
+  color: var(--quarternary);
+  top: -20px;
+  left: -25px;
+  transform: rotateY(180deg);
+}
+
+.faq_title {
+  margin: 0 35px 0 0;
+}
+
+.faq_text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq_text{
+  display: block;
+}
+
+.faq_toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0;
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 
+  0 3px 6px rgba(0, 0, 0, 0.1); */
+  border-radius: 50%; 
+}
+
+.faq_toggle:focus {
+  outline: 0;
+}
+
+.faq.active .faq_toggle {
+  background-color: lightgray;
+}
+
+.faq_toggle .fa-times{
+  display: none;
+}
+
+.faq.active .faq_toggle .fa-chevron-down{
+  display: none;
+}
+
+.faq.active .faq_toggle .fa-times{
+  display: block;
+  color: var(--white);
+}
+
