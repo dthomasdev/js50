@@ -8,10 +8,39 @@
 body {
   display: flex;
   justify-content: center;
+  background: radial-gradient(#fff, 80%, #999);
+  height: 100vh;
 }
 
 .link-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+a {
+  position: relative;
+  text-decoration: 0;
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  color: unset;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background-color: hsl(0, 91%, 55%);
+  transition: all 0.2s linear;
+}
+
+a:hover::after {
+  right: 0;
+}
+
+a:visited {
+  color: unset;
 }
