@@ -12,6 +12,11 @@ body {
   height: 100vh;
 }
 
+#subtitle {
+  font-style: oblique;
+  color: steelblue;
+}
+
 .link-container {
   display: flex;
   flex-direction: column;

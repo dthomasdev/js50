@@ -12,25 +12,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Form input Wave</title>
+    <title>Random Choice</title>
   </head>
   <body>
     <div class="container">
-      <h2 class="form-title">Login</h2>
-      <div class="form-control">
-        <input id="email" name="email" type="text" required />
-        <label for="email">Email</label>
+      <h3>
+        enter your choices and press enter when ready!
+      </br>
+        <span>separate your choices with a comma (',')</span>
+      </h3>
+      <textarea
+        name="textarea"
+        id="textarea"
+        placeholder="Enter choices here. . ."
+      ></textarea>
+      <div id="tags">
+        <!-- <span class="tag">choice1</span>
+        <span class="tag">choice2</span>
+        <span class="tag">choice3</span> -->
       </div>
-      <div class="form-control">
-        <input id="password" name="password" type="password" required />
-        <label for="password">Password</label>
-      </div>
-
-      <button class="btn">Login</button>
-
-      <p class="text">Don't have an account? <a href="#">Register</a></p>
     </div>
-
     <script src="app.js" type="text/javascript"></script>
   </body>
 </html>
