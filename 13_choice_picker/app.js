@@ -33,32 +33,24 @@ function createTags(input){
 function randomization(){
   textArea.disabled = true;
   const times = 30;
-  
+
   const interval = setInterval(()=>{
     const randomTag = pickTag();
-
     highlightTag(randomTag);
-
     setTimeout(()=>{
       unHighlightTag(randomTag);
     }, 100)
   }, 100);
 
   setTimeout(()=>{
-    
     clearInterval(interval);
-
+    
     setTimeout(()=>{
       const randomTag = pickTag();
       highlightTag(randomTag);
+      textArea.disabled = false
     }, 100)
-
   }, times*100);
-
-  setTimeout(()=>{
-    textArea.disabled = false
-  }, times*100)
-
 }
 
 function pickTag(){
